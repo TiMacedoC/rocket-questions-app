@@ -24,24 +24,27 @@
     <div class="content" id="room">
 
         <header>
-            <img src=" assets/logo.svg" alt="rocket.Q logo">
+            <a href="home.html"><img src=" assets/logo.svg" alt="rocket.Q logo"></a>
 
             <div class="header-buttons">
                 <a href="create-room.html">
                     <div class="button">
-                        <img src="assets/white-users-icon.svg" alt="">Criar sala
+                        <img src="assets/white-users-icon.svg" alt="Criar uma sala">Criar sala
                     </div>
                 </a>
                 <button class="button outlined">
-                    # 323243<img src="assets/copy-icon.svg" alt="">
+                    #323243<img src="assets/copy-icon.svg" alt="Copiar número da sala">
                 </button>
             </div>
         </header>
 
         <div class="question-area">
             <h2>Faça uma pergunta</h2>
-            <textarea name="question-box" id="question-box" cols="30" rows="10"
-                placeholder="O que você quer perguntar?"></textarea>
+            <form action="">
+                <label class="sr-only" for-id="question-box">O que você quer perguntar?</label>
+                <textarea name="question-box" id="question-box" cols="30" rows="10"
+                    placeholder="O que você quer perguntar?"></textarea>
+            </form>
 
             <div class="question-footer">
                 <div class="left-side">
