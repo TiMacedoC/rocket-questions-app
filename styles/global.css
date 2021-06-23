@@ -45,6 +45,10 @@ input, button, .button {
     border-radius: 8px;
 }
 
+input{
+    outline: none;
+}
+
 .content {
     width: 100%;
     margin: 0 auto;

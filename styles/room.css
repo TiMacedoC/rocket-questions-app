@@ -40,35 +40,49 @@ div .question-area {
     margin: 6.4rem auto 0; 
 }
 
-#question-box {
+#question-textarea {
+    width: 100%;
+    height: 67%;
+    margin-top: 0;
+    background-color: var(--background);
+    resize: none;
+    outline: none;
+    color: var(--black);
+
+    padding: .8rem 1.6rem;
+    border-radius: 8px 8px 8px 8px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#question-textarea::placeholder{
+    color: var(--grey-blue);
+}
+
+#questions-form {
     width: 100%;
     height: 15rem;
     margin-top: 0;
     background-color: var(--background);
-
-    /* Distancia entre as linhas em um texto */
-    line-height: 2rem;
-
-    resize: none;
-    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    
     border: .2rem solid var(--grey-blue);
-
     border-radius: 8px 8px 8px 8px;
 
+
     /* FONT */
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
 }
 
 div .question-footer {
     font-family: 'Open Sans', sans-serif;
     width: 100%;
-    height: 4rem;
+    height: 3.5rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     padding: 0 1.6rem;
-    margin-top: -5.5rem;
     color: var(--grey-blue);
 }
 
