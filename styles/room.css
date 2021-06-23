@@ -1,0 +1,72 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+div .header-buttons {
+    display: flex;
+}
+
+button, .button {
+    max-width: 17.3rem;
+    padding: 2rem;
+    margin: 0 0.4rem;
+}
+
+button img, .button img {
+    margin: 0 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--black);
+    font-size: clamp(20px, 5vw, 2.8rem);
+    margin-bottom: 2.4rem;
+}
+
+div .question-area {
+    width: 80%;
+    margin: 6.4rem auto 0; 
+}
+
+#question-box {
+    width: 100%;
+    height: 15rem;
+    margin-top: 0;
+
+    resize: none;
+    padding: 1.5rem;
+    border: .2rem solid var(--grey-blue);
+
+    border-radius: 8px 8px 8px 8px;
+
+    /* FONT */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+}
+
+div .question-footer {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.6rem;
+    margin-top: -5.5rem;
+    color: var(--grey-blue);
+}
+
+div .question-footer button {
+    height: 100%;
+    width: 9.8rem;
+    font-size: 1.6rem;
+}
+
+div .question-footer .left-side {
+    display: flex;
+}
+

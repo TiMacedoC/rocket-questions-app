@@ -3,7 +3,7 @@
     padding: 0;
     border: none;
     text-decoration: none;
-    box-sizing: border-box;-
+    box-sizing: border-box;
 }
 
 /* fonts
@@ -26,10 +26,11 @@ html {
     --grey-medium: #D3D9E2;;
     --grey-light: #E5EAF1;;
 
-    font-size: 62.5%;        
+    font-size: 62.5%;    
 }
 
 body {
+    display: flex;
     height: 100vh;
     background: var(--background);
 }
@@ -84,6 +85,7 @@ button:hover, .button:hover {
 button img, .button img {
     margin-right: 1rem;
     width: 2rem;
+    height: 2rem;
 }
 
 .button.outlined, button.outlined  {
@@ -94,7 +96,6 @@ button img, .button img {
 }
 
 .content header {
-    background-color: #77aef1;
     width: 80%;
     margin: 3.5rem auto;
 }
