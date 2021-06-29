@@ -59,7 +59,7 @@ div .question-area {
 }
 
 #questions-form {
-    width: 100%;
+    width: 99.9%;
     height: 13.6rem;
     margin-top: 0;
     margin-bottom: 1.4rem;
@@ -68,7 +68,7 @@ div .question-area {
     flex-wrap: wrap;
     
     border: .2rem solid var(--grey-blue);
-    border-radius: 8px 8px 8px 8px;
+    border-radius: 0px 8px 8px 8px;
 
 
     /* FONT */
@@ -81,11 +81,11 @@ div .question-footer {
     font-weight: 400;
     font-size: 1.4rem;
     width: 100%;
-    height: 4rem;
+    height: 4.3rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: .4rem 1.6rem;
+    padding: .4rem 1.2rem;
     color: var(--grey-blue);
 }
 
@@ -112,41 +112,69 @@ div .question-footer .left-side p {
     height: 13.6rem;
     background-color: var(--light-blue);
     margin-bottom: .8rem;
-    border-radius: 8px 8px 8px 8px;
+    border-radius: 0px 8px 8px 8px;
+    padding: 2.3rem 3.2rem 2rem 2rem;
 
-    display: grid;
-    
-    grid-template-columns: 70% 30%;
+    /* display: grid;
+    grid-template-columns: 70% 30%; */
+
+    display: flex;
+    flex-direction: column;
 }
 
 /* --PERGUNTA E AVATAR-- */
 .question-content {
     color: var(--black);
     display: flex; 
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
-    padding: .5rem 0;
     overflow: hidden;
 }
 
 /* -AVATAR- */
 .question-content img {
-    width: 5.2rem;
-    min-height: 5.2rem;
-    margin: auto 1.6rem auto 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    
+}
+
+/* DIV QUE ENVOLVE A IMAGEM E A GENTE VAI DEIXAR REDONDA */
+.user {
+    padding: 1.4rem;
+    background-color: var(--blue); /*ou var(--grey-blue)*/
+    margin-right: 1.6rem;
+    clip-path: circle();
+    
 }
 
 /* -PERGUNTA- */
 .question-content .question {
     height: 100%;
     display: flex;
-    align-items: center;
     overflow: auto;
 }
+
+.question-content .question p {
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    min-height: 5rem;
+}
+
+/* ----MARCADO COMO LIDO---- */
+.question-wrapper.read {
+    background-color: var(--grey-medium);
+}
+
+.question-wrapper.read .user {
+    background-color: var(--grey-blue);
+}
+
 
 /* --AÇÕES (MARCAR COMO LIDA E EXCLUIR)-- */
 
 .actions {
+    /* background-color: aquamarine; */
     font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
     color: var(--grey-dark);
@@ -156,11 +184,19 @@ div .question-footer .left-side p {
 }
 
 .actions .mark-as-read, .actions .delete {
-    margin-bottom: 2.5rem;
+    margin-top: .2rem;
     display: flex;
-    margin-right: 3.2rem;
     color: var(--grey-dark);
+}
 
+/* SÓ O DELETE TEM MARGEM À ESQUERDA */
+/* ESSE SELETOR + PEGA A TAG IRMÃ, NESSE CASO PEGANDO O SEGUNDO a DENTRO DE .ACTIONS */
+.actions > a + a{
+    margin-left: 2.4rem;
+}
+
+.actions .mark-as-read:hover, .actions .delete:hover {
+    filter: brightness(1.3);
 }
 
 .actions img {

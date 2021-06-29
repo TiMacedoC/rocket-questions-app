@@ -23,7 +23,7 @@ html {
 
     --grey-dark: #4D5E77;
     --grey-blue: #A1B2CD;
-    --grey-medium: #D3D9E2;;
+    --grey-medium: #eaecf2;;
     --grey-light: #E5EAF1;;
 
     font-size: 62.5%;    
@@ -33,6 +33,7 @@ body {
     display: flex;
     height: 100vh;
     background: var(--background);
+    
 }
 
 body, button, input, textarea {
@@ -84,6 +85,12 @@ button, .button {
 
 button:hover, .button:hover {
     filter: brightness(1.2);
+}
+
+button:active, .button:active {
+    transition: filter 0s;
+    filter: none;
+
 }
 
 button img, .button img {

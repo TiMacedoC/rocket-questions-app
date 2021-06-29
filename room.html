@@ -11,6 +11,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/room.css">
+    <link rel="stylesheet" href="styles/room-modal.css">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +21,7 @@
 </head>
 
 <body>
+
 
     <div class="content" id="room">
 
@@ -85,8 +87,76 @@
 
                 </div>
 
+                <div class="question-wrapper read">
+
+                    <div class="question-content">
+                        <div class="user">
+                            <img src="assets/avatar-icon.svg" alt="Avatar logo">
+                        </div>
+                        <div class="question">
+                            <p>O que é JavaScript?
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <a href="#" class="mark-as-read">
+                            <img src="assets/blue-check-icon.svg" alt="marcar como lida">
+                            <p>Marcar como lida</p>
+                        </a>
+                        <a href="#" class="delete">
+                            <img src="assets/trash-icon.svg" alt="Excluir">
+                            <p>Excluir</p>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="question-wrapper">
+
+                    <div class="question-content">
+                        <div class="user">
+                            <img src="assets/avatar-icon.svg" alt="Avatar logo">
+                        </div>
+                        <div class="question">
+                            <p>O que é typeScript?
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <a href="#" class="mark-as-read">
+                            <img src="assets/blue-check-icon.svg" alt="marcar como lida">
+                            <p>Marcar como lida</p>
+                        </a>
+                        <a href="#" class="delete">
+                            <img src="assets/trash-icon.svg" alt="Excluir">
+                            <p>Excluir</p>
+                        </a>
+                    </div>
+
+                </div>
             </section>
         </main>
+
+    </div>
+
+    <!-- -------MODAL------ -->
+
+    <div class="modal-wrapper">
+
+        <div class="modal">
+            <h2>Excluir pergunta</h2>
+            <p>Tem certeza que você deseja excluir esta pergunta?</p>
+
+            <form action="#">
+                <label class="sr-only" for-id="password">Digite sua senha</label>
+                <input type="password" id="password" placeholder="Digite sua senha">
+
+                <div class="modal-buttons">
+                    <button>Sim, excluir</button>
+                    <div class="button">Cancelar</div>
+                </div>
+            </form>
+        </div>
 
     </div>
 
