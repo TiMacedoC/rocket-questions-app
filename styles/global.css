@@ -47,6 +47,7 @@ input, button, .button {
 }
 
 input{
+    /* ----Tira a borda destacada ao clicar---- */
     outline: none;
 }
 
