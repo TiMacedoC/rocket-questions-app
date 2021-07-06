@@ -1,22 +1,3 @@
-#question-box {
-    width: 100%;
-    height: 15rem;
-    margin-top: 0;
-    background-color: var(--background);
 
-    /* Distancia entre as linhas em um texto */
-    line-height: 2rem;
-
-    resize: none;
-    padding: 1.5rem;
-    border: .2rem solid var(--grey-blue);
-
-    border-radius: 8px 8px 8px 8px;
-
-    /* FONT */
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.6rem;
-}
-
-aula 
-começar aula 4 
+video 4 
+2:04 min
