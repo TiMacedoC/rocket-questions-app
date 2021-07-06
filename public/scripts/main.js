@@ -29,7 +29,7 @@ const getCancelButton = document.querySelector("#cancelButton").addEventListener
 const getYesButton = document.getElementById("yesButton")
 getYesButton.addEventListener("click", event => {
     event.preventDefault();
-    modal.close();
+    // modal.close();
 })
 
 
@@ -44,7 +44,7 @@ function handleClick(event, check = true) {
 
     const getForm = document.querySelector(".modal form");
 
-    let finalHTML = `/room/${roomId}/${questionId}/${slug}`
+    let finalHTML = `/question/${roomId}/${questionId}/${slug}`
     getForm.setAttribute("action", finalHTML)
 
 
