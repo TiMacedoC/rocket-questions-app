@@ -1,3 +1,5 @@
+// BOTAR O ESC PRA FECHAR A MODAL É AQUI NESSA MAIN
+
 import Modal from './modal.js';
 
 const modal = Modal();
@@ -28,8 +30,8 @@ const getCancelButton = document.querySelector("#cancelButton").addEventListener
 
 const getYesButton = document.getElementById("yesButton")
 getYesButton.addEventListener("click", event => {
-    event.preventDefault();
-    // modal.close();
+    // event.preventDefault();
+    modal.close();
 })
 
 
