@@ -212,7 +212,7 @@ div .question-footer .left-side p {
     flex-direction: column;
     align-items: center;
 
-    width: 27.7rem;
+    width: 28.5rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -238,5 +238,7 @@ div .question-footer .left-side p {
     color: var(--black);
     margin-top: 0;
     margin-bottom: 1.3rem;
+    text-align: center;
+
 }
 

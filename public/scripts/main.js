@@ -31,7 +31,7 @@ const getCancelButton = document.querySelector("#cancelButton").addEventListener
 const getYesButton = document.getElementById("yesButton")
 getYesButton.addEventListener("click", event => {
     // event.preventDefault();
-    modal.close();
+    // modal.open();
 })
 
 

@@ -92,3 +92,34 @@
     background-color: var(--grey-light);
     color: var(--grey-dark);
 }
+
+
+/* SENHA ERRADA */
+.modal #active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal .wrong-pass {
+    background-color: var(--white);
+
+    width: min(59rem, 90%);
+    height: min(36.2rem, 90%);
+    border-radius: .8rem;
+    position: fixed;
+    
+    margin: auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal .wrong-pass button {
+    margin-top: 2rem;
+    width: 10rem;
+}

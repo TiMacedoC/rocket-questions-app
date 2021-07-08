@@ -1,6 +1,5 @@
 const Database = require('../db/config')
 
-
 module.exports = {
     async index(req, res) {
         const db = await Database()
@@ -22,10 +21,14 @@ module.exports = {
                 await db.run(`DELETE FROM questions WHERE id = ${questionId}`)
 
             }
+
+            res.redirect(`/room/${roomId}`)
+        } else {
+            res.render("parts/wrongpassword", { roomId: roomId })
+
         }
 
         console.log(roomId, questionId, action, password)
-        res.redirect(`/room/${roomId}`)
 
 
     },

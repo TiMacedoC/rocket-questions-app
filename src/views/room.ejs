@@ -68,59 +68,65 @@
 
                 <h2 class="sr-only">Perguntas da comunidade</h2>
 
-                <% questions.forEach(question=> {
-                    if (question.read!=1){%>
+                <% if (!isQuestion){%>
 
-                    <div class="question-wrapper">
+                    <%- include('parts/noquestions')%>
 
-                        <div class="question-content">
-                            <div class="user">
-                                <img src="/images/avatar-icon.svg" alt="Avatar logo">
-                            </div>
-                            <div class="question">
-                                <p>
-                                    <%= question.title%>
-                                </p>
-                            </div>
-                        </div>
+                        <%} else {%>
 
-                        <div class="actions">
-                            <a href="#" class="mark-as-read" data-id="<%= question.id%>">
-                                <img src="/images/blue-check-icon.svg" alt="marcar como lida">
-                                <p>Marcar como lida</p>
-                            </a>
-                            <a href="#" class="delete" data-id="<%= question.id%>">
-                                <img src="/images/trash-icon.svg" alt="Excluir">
-                                <p>Excluir</p>
-                            </a>
-                        </div>
+                            <% questions.forEach(question=> {
+                                if (question.read!=1){%>
 
-                    </div>
+                                <div class="question-wrapper">
 
-                    <% }}); %>
-
-                        <% questions.forEach(question=> {
-                            if (question.read==1){%>
-
-                            <div class="question-wrapper read">
-
-                                <div class="question-content">
-                                    <div class="user">
-                                        <img src="/images/avatar-icon.svg" alt="Avatar logo">
+                                    <div class="question-content">
+                                        <div class="user">
+                                            <img src="/images/avatar-icon.svg" alt="Avatar logo">
+                                        </div>
+                                        <div class="question">
+                                            <p>
+                                                <%= question.title%>
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="question">
-                                        <%= question.title%>
+
+                                    <div class="actions">
+                                        <a href="#" class="mark-as-read" data-id="<%= question.id%>">
+                                            <img src="/images/blue-check-icon.svg" alt="marcar como lida">
+                                            <p>Marcar como lida</p>
+                                        </a>
+                                        <a href="#" class="delete" data-id="<%= question.id%>">
+                                            <img src="/images/trash-icon.svg" alt="Excluir">
+                                            <p>Excluir</p>
+                                        </a>
                                     </div>
+
                                 </div>
 
-                                <div class="actions">
-                                    <a href="#" class="delete" data-id="<%= question.id%>">
-                                        <img src="/images/trash-icon.svg" alt="Excluir">
-                                        <p>Excluir</p1 </a>
-                                </div>
+                                <% }}); %>
 
-                            </div>
-                            <% }}); %>
+                                    <% questions.forEach(question=> {
+                                        if (question.read==1){%>
+
+                                        <div class="question-wrapper read">
+
+                                            <div class="question-content">
+                                                <div class="user">
+                                                    <img src="/images/avatar-icon.svg" alt="Avatar logo">
+                                                </div>
+                                                <div class="question">
+                                                    <%= question.title%>
+                                                </div>
+                                            </div>
+
+                                            <div class="actions">
+                                                <a href="#" class="delete" data-id="<%= question.id%>">
+                                                    <img src="/images/trash-icon.svg" alt="Excluir">
+                                                    <p>Excluir</p1 </a>
+                                            </div>
+
+                                        </div>
+                                        <% }})}; %>
 
             </section>
         </main>
@@ -131,9 +137,15 @@
     <div class="modal-wrapper">
 
         <div class="modal">
+
+            <div class="wrong-pass" id="">
+                <h2>Ops !</h2>
+                <p>Senha errada, tente novamente</p>
+                <button>OK</button>
+            </div>
+
             <h2>Excluir pergunta</h2>
             <p>Tem certeza que você deseja excluir esta pergunta?</p>
-
             <form action="" method="POST" for-id="yesButton">
                 <label class="sr-only" for-id="password">Digite sua senha</label>
                 <input type="password" id="password" name="password" placeholder="Digite sua senha">
